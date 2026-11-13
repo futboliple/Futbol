@@ -1,0 +1,180 @@
+{
+ "players": [
+  {
+   "id": "p1",
+   "name": "Samuel De La Cruz",
+   "pos": [
+    "MC",
+    "EI"
+   ],
+   "wins": 1,
+   "losses": 0,
+   "goals": 1,
+   "assists": 2,
+   "rit": 8.3,
+   "tir": 6,
+   "pas": 8,
+   "reg": 6,
+   "def": 9,
+   "fis": 7.6,
+   "played": 1,
+   "div": 5,
+   "man": 5,
+   "sae": 5,
+   "ref": 5,
+   "vel": 5,
+   "gpo": 5
+  },
+  {
+   "id": "p2",
+   "name": "Jean Marcos",
+   "pos": [],
+   "wins": 0,
+   "losses": 1,
+   "goals": 2,
+   "assists": 2,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5,
+   "played": 1
+  },
+  {
+   "id": "p3",
+   "name": "Yusuf",
+   "pos": [],
+   "wins": 1,
+   "losses": 0,
+   "goals": 3,
+   "assists": 4,
+   "rit": 9.9,
+   "tir": 9.9,
+   "pas": 9.9,
+   "reg": 9.9,
+   "def": 6,
+   "fis": 9.9,
+   "played": 1
+  },
+  {
+   "id": "p4",
+   "name": "Victor",
+   "pos": [],
+   "wins": 1,
+   "losses": 0,
+   "goals": 1,
+   "assists": 4,
+   "rit": 9,
+   "tir": 8,
+   "pas": 9,
+   "reg": 9,
+   "def": 9,
+   "fis": 5,
+   "played": 1
+  },
+  {
+   "id": "p5",
+   "name": "Yoelfy",
+   "pos": [],
+   "wins": 0,
+   "losses": 0,
+   "goals": 0,
+   "assists": 0,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5
+  },
+  {
+   "id": "p6",
+   "name": "Samuel Santiago",
+   "pos": [],
+   "wins": 0,
+   "losses": 1,
+   "goals": 1,
+   "assists": 2,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5,
+   "played": 1
+  },
+  {
+   "id": "pmwe2sy1a",
+   "name": "Orlyn",
+   "pos": [
+    "POR"
+   ],
+   "played": 0,
+   "wins": 0,
+   "losses": 0,
+   "goals": 0,
+   "assists": 0,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5,
+   "div": 5,
+   "man": 5,
+   "sae": 5,
+   "ref": 5,
+   "vel": 5,
+   "gpo": 5
+  }
+ ],
+ "matches": [
+  {
+   "id": "mmwe2mq7x",
+   "d": "2026-11-12",
+   "na": "Equipo A",
+   "nb": "Equipo B",
+   "sa": 5,
+   "sb": 3,
+   "st": [
+    {
+     "id": "p1",
+     "t": "A",
+     "g": 1,
+     "a": 2,
+     "s": 0
+    },
+    {
+     "id": "p2",
+     "t": "B",
+     "g": 2,
+     "a": 3,
+     "s": 0
+    },
+    {
+     "id": "p4",
+     "t": "A",
+     "g": 1,
+     "a": 4,
+     "s": 0
+    },
+    {
+     "id": "p3",
+     "t": "A",
+     "g": 3,
+     "a": 4,
+     "s": 0
+    },
+    {
+     "id": "p6",
+     "t": "B",
+     "g": 1,
+     "a": 2,
+     "s": 0
+    }
+   ],
+   "mvp": "p3"
+  }
+ ]
+}
