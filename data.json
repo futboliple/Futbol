@@ -32,7 +32,7 @@
    "wins": 0,
    "losses": 1,
    "goals": 2,
-   "assists": 2,
+   "assists": 3,
    "rit": 5,
    "tir": 5,
    "pas": 5,
@@ -110,11 +110,11 @@
    "pos": [
     "POR"
    ],
-   "played": 0,
-   "wins": 0,
+   "played": 1,
+   "wins": 1,
    "losses": 0,
    "goals": 0,
-   "assists": 0,
+   "assists": 1,
    "rit": 5,
    "tir": 5,
    "pas": 5,
@@ -126,7 +126,8 @@
    "sae": 5,
    "ref": 5,
    "vel": 5,
-   "gpo": 5
+   "gpo": 5,
+   "saves": 5
   }
  ],
  "matches": [
@@ -143,35 +144,48 @@
      "t": "A",
      "g": 1,
      "a": 2,
-     "s": 0
+     "s": 0,
+     "b": false
     },
     {
      "id": "p2",
      "t": "B",
      "g": 2,
      "a": 3,
-     "s": 0
+     "s": 0,
+     "b": false
     },
     {
      "id": "p4",
      "t": "A",
      "g": 1,
      "a": 4,
-     "s": 0
+     "s": 0,
+     "b": false
     },
     {
      "id": "p3",
      "t": "A",
      "g": 3,
      "a": 4,
-     "s": 0
+     "s": 0,
+     "b": false
     },
     {
      "id": "p6",
      "t": "B",
      "g": 1,
      "a": 2,
-     "s": 0
+     "s": 0,
+     "b": false
+    },
+    {
+     "id": "pmwe2sy1a",
+     "t": "A",
+     "g": 0,
+     "a": 1,
+     "s": 5,
+     "b": false
     }
    ],
    "mvp": "p3"
