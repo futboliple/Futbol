@@ -81,6 +81,23 @@ main>h1{font-size:30px;font-weight:900;letter-spacing:.3px;background:linear-gra
 .mid{font-weight:700;letter-spacing:.3px;box-shadow:0 2px 8px rgba(0,0,0,.4)}
 .pc{background:linear-gradient(160deg,#f6dc8a,#c9961a);box-shadow:0 3px 8px rgba(0,0,0,.45)}
 .btn{box-shadow:0 2px 6px rgba(31,138,76,.35)}
+.tabs{position:static;flex-wrap:wrap;overflow:visible;margin:10px 0 12px;padding:0;border:0;background:none}
+.tabs button{padding:7px 12px;font-size:13px}
+.tot{grid-template-columns:repeat(3,1fr)}
+.row,.fc{cursor:pointer}
+.modal{display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.6);align-items:flex-end;justify-content:center}
+.sheet{background:var(--card);color:var(--tx);width:100%;max-width:560px;max-height:90vh;overflow:auto;border-radius:20px 20px 0 0;padding:16px 16px calc(20px + env(safe-area-inset-bottom,0px))}
+@media (min-width:640px){.modal{align-items:center}.sheet{border-radius:20px}}
+.sheet h4{margin:16px 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--mu)}
+.ab{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}
+.ab span{width:112px;color:var(--mu)}
+.ab em{flex:1;height:9px;background:var(--bd);border-radius:6px;overflow:hidden}
+.ab em i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--gold))}
+.ab b{width:32px;text-align:right}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sg div{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:8px;text-align:center}
+.sg b{display:block;font-size:18px;color:var(--ac)}
+.sg span{font-size:11px;color:var(--mu)}
 </style>
 </head>
 <body>
@@ -93,6 +110,7 @@ main>h1{font-size:30px;font-weight:900;letter-spacing:.3px;background:linear-gra
   <div id="list"></div>
   <p class="note" id="note"></p>
 </main>
+<div id="modal" class="modal" onclick="if(event.target===this)closeP()"><div class="sheet" id="sheet"></div></div>
 
 <script>
 const ATTRS=[["rit","RIT"],["tir","TIR"],["pas","PAS"],["reg","REG"],["def","DEF"],["fis","FIS"]];
@@ -112,7 +130,7 @@ const posTxt=p=>(p.pos||[]).join("/")||"—";
 
 function render(){
   const sum=k=>players.reduce((a,p)=>a+(+p[k]||0),0);
-  $("tot").innerHTML=[["Jugadores",players.length],["Victorias",sum("wins")],["Goles",sum("goals")],["Asist.",sum("assists")]].map(([l,v])=>`<div><b>${v}</b><span>${l}</span></div>`).join("");
+  $("tot").innerHTML=[["Jugadores",players.length],["Partidos",matches.length],["Goles",sum("goals")]].map(([l,v])=>`<div><b>${v}</b><span>${l}</span></div>`).join("");
   $("tabs").innerHTML=[["matches","📋 Partidos"],["cards","🃏 Cartas"],["wins","Victorias"],["losses","Derrotas"],["goals","Goles"],["assists","Asistencias"],["saves","🧤 Paradas"],["overall","Overall"],["played","Jugados"],["awards","🏅 Premios"],["trophies","🏆 Trofeos"],["teams","👥 Equipos"]].map(([k,l])=>`<button class="${k===cat?"on":""}" onclick="setCat('${k}')">${l}</button>`).join("")+
     (canEdit?`<button class="${cat==="edit"?"on":""}" onclick="setCat('edit')">✏️ Editar</button>`:"");
   const L=$("list");$("note").textContent=canEdit?"":"Solo los administradores pueden editar.";
@@ -129,9 +147,9 @@ function render(){
   const sorted=players.filter(p=>cat!=="saves"||isGK(p)).sort((a,b)=>cat==="cards"?ovr(b)-ovr(a):val(b,cat)-val(a,cat)||a.name.localeCompare(b.name));
   if(!sorted.length){L.innerHTML="";$("note").textContent="Aún no hay jugadores.";return}
   if(cat==="cards"){
-    L.innerHTML=`<div class="grid">`+sorted.map(p=>`<div class="fc"><div class="ov">${ovr(p).toFixed(1)}</div><div class="ps">${esc(posTxt(p))} ${trophyIcons(p)}</div><div class="fn">${esc(p.name)}</div><div class="at">${attrsOf(p).map(([k,l])=>`<span><b>${(+p[k]||0).toFixed(1)}</b> ${l}</span>`).join("")}</div><div class="ft">${p.played|0}PJ · ${p.wins|0}V · ${p.losses|0}D · ${p.goals|0}G · ${p.assists|0}A${isGK(p)?` · ${p.saves|0}🧤 · ${p.cleans|0}🔒`:""}</div></div>`).join("")+`</div>`;
+    L.innerHTML=`<div class="grid">`+sorted.map(p=>`<div class="fc" onclick="openP('${p.id}')"><div class="ov">${ovr(p).toFixed(1)}</div><div class="ps">${esc(posTxt(p))} ${trophyIcons(p)}</div><div class="fn">${esc(p.name)}</div><div class="at">${attrsOf(p).map(([k,l])=>`<span><b>${(+p[k]||0).toFixed(1)}</b> ${l}</span>`).join("")}</div><div class="ft">${p.played|0}PJ · ${p.wins|0}V · ${p.losses|0}D · ${p.goals|0}G · ${p.assists|0}A${isGK(p)?` · ${p.saves|0}🧤 · ${p.cleans|0}🔒`:""}</div></div>`).join("")+`</div>`;
   }else{
-    L.innerHTML=sorted.map((p,i)=>`<div class="row"><div class="pos">${i+1}</div><div class="nm">${esc(p.name)} ${trophyIcons(p)}<small>${esc(posTxt(p))} · ${p.played|0} PJ · ${p.wins|0}V ${p.losses|0}D · ${p.goals|0}G · ${p.assists|0}A · ★ ${ovr(p).toFixed(1)}</small></div><div class="big">${fmt(cat,val(p,cat))}</div></div>`).join("");
+    L.innerHTML=sorted.map((p,i)=>`<div class="row" onclick="openP('${p.id}')"><div class="pos">${i+1}</div><div class="nm">${esc(p.name)} ${trophyIcons(p)}<small>${esc(posTxt(p))} · ${p.played|0} PJ · ${p.wins|0}V ${p.losses|0}D · ${p.goals|0}G · ${p.assists|0}A · ★ ${ovr(p).toFixed(1)}</small></div><div class="big">${fmt(cat,val(p,cat))}</div></div>`).join("");
   }
 }
 function setCat(c){cat=c;render()}
@@ -284,6 +302,27 @@ async function doLogin(){
   $("tk").value="";adminUI();render();
 }
 function logout(){tokMem="";try{localStorage.removeItem("gh_token")}catch(e){}canEdit=false;if(cat==="edit")cat="wins";adminUI();render()}
+const ANAME={rit:"Ritmo",tir:"Tiro",pas:"Pase",reg:"Regate",def:"Defensa",fis:"Físico",div:"Estirada",man:"Manejo",sae:"Saque",ref:"Reflejos",vel:"Velocidad",gpo:"Posición"};
+function closeP(){$("modal").style.display="none";document.body.style.overflow=""}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeP()});
+function openP(id){
+  const p=get(id);if(!p)return;
+  const gk=isGK(p),at=attrsOf(p);
+  const rs=matches.filter(m=>m.st.some(e=>e.id===id)).map(m=>{const e=m.st.find(x=>x.id===id);return {m,e,r:rate(m,e)}});
+  const avg=rs.length?(rs.reduce((a,x)=>a+x.r,0)/rs.length).toFixed(1):"—";
+  const posL=(p.pos||[]).map(c=>(POS.find(z=>z[0]===c)||[c,c])[1]).join(" · ")||"Sin posición";
+  const tr=T.map(t=>lvl(p,t)?`${t[0]}${MED[lvl(p,t)]} ${t[1]}`:"").filter(Boolean);
+  const aw=wonBy(id).map(i=>AW[i][0]+" "+AW[i][1]);
+  const box=(l,v)=>`<div><b>${v}</b><span>${l}</span></div>`;
+  const stats=[["Partidos",p.played|0],["Victorias",p.wins|0],["Derrotas",p.losses|0],["Goles",p.goals|0],["Asistencias",p.assists|0],["MVP",mvps(id)],["Nota media",avg]];
+  if(gk)stats.push(["Paradas",p.saves|0],["Porterías a 0",p.cleans|0]);
+  $("sheet").innerHTML=`<div style="display:flex;align-items:center;gap:14px"><div class="fc" style="width:92px;flex:none;border-radius:14px 14px 30px 30px;cursor:default"><div class="ov">${ovr(p).toFixed(1)}</div><div class="ps">${esc(posTxt(p))}</div></div><div style="flex:1;min-width:0"><div style="font-size:22px;font-weight:800">${esc(p.name)}</div><div class="note" style="text-align:left;margin:2px 0">${esc(posL)}${gk?" 🧤":""}</div></div><button class="btn del" style="height:34px" onclick="closeP()">✕</button></div>`+
+  `<h4>Atributos</h4>`+at.map(([k,l])=>{const v=+p[k]||0;return `<div class="ab"><span>${l} · ${ANAME[k]||""}</span><em><i style="width:${v/9.9*100}%"></i></em><b>${v.toFixed(1)}</b></div>`}).join("")+
+  `<h4>Estadísticas</h4><div class="sg">${stats.map(([l,v])=>box(l,v)).join("")}</div>`+
+  `<h4>Trofeos y premios</h4><div>${(tr.concat(aw)).map(x=>`<span class="badge" style="margin:2px 4px 2px 0">${esc(x)}</span>`).join("")||`<span class="note" style="margin:0">Aún sin trofeos</span>`}</div>`+
+  `<h4>Últimos partidos</h4>`+(rs.slice(0,6).map(({m,e,r})=>`<div class="stat"><span>${m.d} · ${esc(m.na)} ${m.sa}-${m.sb} ${esc(m.nb)} <small style="color:var(--mu)">${e.g?e.g+"⚽ ":""}${e.a?e.a+"🎯 ":""}${e.s?e.s+"🧤 ":""}${e.b?"🔄 ":""}${m.mvp===id?"⭐":""}</small></span><b>${r.toFixed(1)}</b></div>`).join("")||`<div class="note" style="margin:0;text-align:left">Aún no tiene partidos registrados</div>`);
+  $("modal").style.display="flex";document.body.style.overflow="hidden";$("sheet").scrollTop=0;
+}
 async function save(){
   if(!dirty)return;
   const t=tok();if(!t){$("note").textContent="Inicia sesión como administrador.";return}
