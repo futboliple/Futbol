@@ -28,7 +28,10 @@
   {
    "id": "p2",
    "name": "Jean Marcos",
-   "pos": [],
+   "pos": [
+    "DC",
+    "MC"
+   ],
    "wins": 0,
    "losses": 1,
    "goals": 2,
