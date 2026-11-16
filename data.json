@@ -167,11 +167,11 @@
    "id": "pmwjpqty3",
    "name": "Yadiel (colo)",
    "pos": [],
-   "played": 0,
-   "wins": 0,
+   "played": 1,
+   "wins": 1,
    "losses": 0,
-   "goals": 0,
-   "assists": 0,
+   "goals": 2,
+   "assists": 3,
    "rit": 6,
    "tir": 8.5,
    "pas": 9,
@@ -189,8 +189,8 @@
     "LI",
     "DFC"
    ],
-   "played": 0,
-   "wins": 0,
+   "played": 1,
+   "wins": 1,
    "losses": 0,
    "goals": 0,
    "assists": 0,
@@ -199,7 +199,7 @@
    "pas": 8,
    "reg": 8,
    "def": 7,
-   "fis": 5
+   "fis": 6
   }
  ],
  "matches": [
@@ -208,7 +208,7 @@
    "d": "2026-11-12",
    "na": "Equipo A",
    "nb": "Equipo B",
-   "sa": 5,
+   "sa": 7,
    "sb": 3,
    "st": [
     {
@@ -257,6 +257,22 @@
      "g": 0,
      "a": 1,
      "s": 5,
+     "b": false
+    },
+    {
+     "id": "pmwjpr2du",
+     "t": "A",
+     "g": 0,
+     "a": 0,
+     "s": 0,
+     "b": true
+    },
+    {
+     "id": "pmwjpqty3",
+     "t": "A",
+     "g": 2,
+     "a": 3,
+     "s": 0,
      "b": false
     }
    ],
