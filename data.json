@@ -156,12 +156,12 @@
    "losses": 0,
    "goals": 0,
    "assists": 0,
-   "rit": 5,
+   "rit": 8.9,
    "tir": 5,
-   "pas": 5,
+   "pas": 6,
    "reg": 5,
-   "def": 5,
-   "fis": 5
+   "def": 8,
+   "fis": 9
   },
   {
    "id": "pmwjpqty3",
@@ -172,12 +172,12 @@
    "losses": 0,
    "goals": 0,
    "assists": 0,
-   "rit": 5,
-   "tir": 5,
-   "pas": 5,
-   "reg": 5,
-   "def": 5,
-   "fis": 5
+   "rit": 6,
+   "tir": 8.5,
+   "pas": 9,
+   "reg": 9,
+   "def": 6,
+   "fis": 8
   },
   {
    "id": "pmwjpr2du",
