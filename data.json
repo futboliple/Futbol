@@ -79,17 +79,19 @@
   {
    "id": "p5",
    "name": "Yoelfy",
-   "pos": [],
+   "pos": [
+    "EI"
+   ],
    "wins": 0,
    "losses": 0,
    "goals": 0,
    "assists": 0,
-   "rit": 5,
-   "tir": 5,
-   "pas": 5,
-   "reg": 5,
-   "def": 5,
-   "fis": 5
+   "rit": 9,
+   "tir": 9,
+   "pas": 9,
+   "reg": 9,
+   "def": 8,
+   "fis": 9
   },
   {
    "id": "p6",
