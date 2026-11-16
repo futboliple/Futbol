@@ -82,7 +82,9 @@
    "name": "Yoelfy",
    "pos": [
     "ED",
-    "DC"
+    "DC",
+    "EI",
+    "SD"
    ],
    "wins": 0,
    "losses": 0,
