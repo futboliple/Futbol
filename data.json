@@ -81,7 +81,10 @@
    "id": "p5",
    "name": "Yoelfy",
    "pos": [
-    "EI"
+    "ED",
+    "EI",
+    "SD",
+    "DC"
    ],
    "wins": 0,
    "losses": 0,
@@ -139,6 +142,54 @@
    "vel": 5,
    "gpo": 5,
    "saves": 5
+  },
+  {
+   "id": "pmwjpol3a",
+   "name": "Jaden",
+   "pos": [],
+   "played": 0,
+   "wins": 0,
+   "losses": 0,
+   "goals": 0,
+   "assists": 0,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5
+  },
+  {
+   "id": "pmwjpqty3",
+   "name": "Yadiel (colo)",
+   "pos": [],
+   "played": 0,
+   "wins": 0,
+   "losses": 0,
+   "goals": 0,
+   "assists": 0,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5
+  },
+  {
+   "id": "pmwjpr2du",
+   "name": "Ryan",
+   "pos": [],
+   "played": 0,
+   "wins": 0,
+   "losses": 0,
+   "goals": 0,
+   "assists": 0,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5
   }
  ],
  "matches": [
