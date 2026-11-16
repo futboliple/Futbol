@@ -183,7 +183,10 @@
    "id": "pmwjpr2du",
    "name": "Ryan",
    "pos": [
-    "MD"
+    "MCD",
+    "MC",
+    "LD",
+    "LI"
    ],
    "played": 0,
    "wins": 0,
