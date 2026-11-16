@@ -96,7 +96,10 @@
   {
    "id": "p6",
    "name": "Samuel Santiago",
-   "pos": [],
+   "pos": [
+    "MC",
+    "EI"
+   ],
    "wins": 0,
    "losses": 1,
    "goals": 1,
