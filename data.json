@@ -48,7 +48,12 @@
   {
    "id": "p3",
    "name": "Yusuf",
-   "pos": [],
+   "pos": [
+    "DC",
+    "MC",
+    "SD",
+    "ED"
+   ],
    "wins": 1,
    "losses": 0,
    "goals": 3,
