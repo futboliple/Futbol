@@ -221,6 +221,26 @@
    "reg": 6,
    "def": 7,
    "fis": 9
+  },
+  {
+   "id": "pmwjqogp1",
+   "name": "Moisés coronado",
+   "pos": [
+    "MCD",
+    "MC",
+    "MCO"
+   ],
+   "played": 0,
+   "wins": 0,
+   "losses": 0,
+   "goals": 0,
+   "assists": 0,
+   "rit": 6,
+   "tir": 7,
+   "pas": 9,
+   "reg": 7,
+   "def": 9,
+   "fis": 8.5
   }
  ],
  "matches": [
