@@ -215,12 +215,12 @@
    "losses": 0,
    "goals": 0,
    "assists": 0,
-   "rit": 5,
-   "tir": 5,
-   "pas": 5,
-   "reg": 5,
-   "def": 5,
-   "fis": 5
+   "rit": 8.9,
+   "tir": 6,
+   "pas": 7.9,
+   "reg": 6,
+   "def": 7,
+   "fis": 9
   }
  ],
  "matches": [
