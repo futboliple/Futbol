@@ -230,10 +230,10 @@
     "MC",
     "MCO"
    ],
-   "played": 0,
+   "played": 1,
    "wins": 0,
-   "losses": 0,
-   "goals": 0,
+   "losses": 1,
+   "goals": 1,
    "assists": 0,
    "rit": 6,
    "tir": 7,
@@ -250,7 +250,7 @@
    "na": "Equipo A",
    "nb": "Equipo B",
    "sa": 7,
-   "sb": 3,
+   "sb": 4,
    "st": [
     {
      "id": "p1",
@@ -313,6 +313,14 @@
      "t": "A",
      "g": 2,
      "a": 3,
+     "s": 0,
+     "b": false
+    },
+    {
+     "id": "pmwjqogp1",
+     "t": "B",
+     "g": 1,
+     "a": 0,
      "s": 0,
      "b": false
     }
