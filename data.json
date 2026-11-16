@@ -28,7 +28,7 @@
   },
   {
    "id": "p2",
-   "name": "Jean Marcos",
+   "name": "Jean Marcos Vázquez",
    "pos": [
     "DC",
     "MC"
@@ -205,6 +205,22 @@
    "reg": 8,
    "def": 7,
    "fis": 6
+  },
+  {
+   "id": "pmwjqld4s",
+   "name": "Angel Tejada",
+   "pos": [],
+   "played": 0,
+   "wins": 0,
+   "losses": 0,
+   "goals": 0,
+   "assists": 0,
+   "rit": 5,
+   "tir": 5,
+   "pas": 5,
+   "reg": 5,
+   "def": 5,
+   "fis": 5
   }
  ],
  "matches": [
