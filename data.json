@@ -8,7 +8,7 @@
     "MCD",
     "MCO"
    ],
-   "wins": 1,
+   "wins": 0,
    "losses": 0,
    "goals": 1,
    "assists": 2,
@@ -34,7 +34,7 @@
     "MC"
    ],
    "wins": 0,
-   "losses": 1,
+   "losses": 0,
    "goals": 2,
    "assists": 3,
    "rit": 9,
@@ -54,7 +54,7 @@
     "SD",
     "ED"
    ],
-   "wins": 1,
+   "wins": 0,
    "losses": 0,
    "goals": 3,
    "assists": 4,
@@ -72,7 +72,7 @@
    "pos": [
     "MC"
    ],
-   "wins": 1,
+   "wins": 0,
    "losses": 0,
    "goals": 1,
    "assists": 4,
@@ -111,7 +111,7 @@
     "EI"
    ],
    "wins": 0,
-   "losses": 1,
+   "losses": 0,
    "goals": 1,
    "assists": 2,
    "rit": 9,
@@ -130,7 +130,7 @@
     "MCD"
    ],
    "played": 1,
-   "wins": 1,
+   "wins": 0,
    "losses": 0,
    "goals": 0,
    "assists": 1,
@@ -156,7 +156,7 @@
     "MCO",
     "MC"
    ],
-   "played": 0,
+   "played": 1,
    "wins": 0,
    "losses": 0,
    "goals": 0,
@@ -173,7 +173,7 @@
    "name": "Yadiel (colo)",
    "pos": [],
    "played": 1,
-   "wins": 1,
+   "wins": 0,
    "losses": 0,
    "goals": 2,
    "assists": 3,
@@ -195,7 +195,7 @@
     "DFC"
    ],
    "played": 1,
-   "wins": 1,
+   "wins": 0,
    "losses": 0,
    "goals": 0,
    "assists": 0,
@@ -210,10 +210,10 @@
    "id": "pmwjqld4s",
    "name": "Angel Tejada",
    "pos": [],
-   "played": 0,
+   "played": 1,
    "wins": 0,
    "losses": 0,
-   "goals": 0,
+   "goals": 3,
    "assists": 0,
    "rit": 8.9,
    "tir": 6,
@@ -232,7 +232,7 @@
    ],
    "played": 1,
    "wins": 0,
-   "losses": 1,
+   "losses": 0,
    "goals": 1,
    "assists": 0,
    "rit": 6,
@@ -250,7 +250,7 @@
    "na": "Equipo A",
    "nb": "Equipo B",
    "sa": 7,
-   "sb": 4,
+   "sb": 7,
    "st": [
     {
      "id": "p1",
@@ -320,6 +320,22 @@
      "id": "pmwjqogp1",
      "t": "B",
      "g": 1,
+     "a": 0,
+     "s": 0,
+     "b": false
+    },
+    {
+     "id": "pmwjpol3a",
+     "t": "B",
+     "g": 0,
+     "a": 0,
+     "s": 0,
+     "b": false
+    },
+    {
+     "id": "pmwjqld4s",
+     "t": "B",
+     "g": 3,
      "a": 0,
      "s": 0,
      "b": false
