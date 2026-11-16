@@ -101,12 +101,12 @@
    "losses": 1,
    "goals": 1,
    "assists": 2,
-   "rit": 5,
-   "tir": 5,
-   "pas": 5,
-   "reg": 5,
-   "def": 5,
-   "fis": 5,
+   "rit": 9,
+   "tir": 7,
+   "pas": 8.9,
+   "reg": 8,
+   "def": 6,
+   "fis": 8,
    "played": 1
   },
   {
