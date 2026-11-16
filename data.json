@@ -182,17 +182,19 @@
   {
    "id": "pmwjpr2du",
    "name": "Ryan",
-   "pos": [],
+   "pos": [
+    "MD"
+   ],
    "played": 0,
    "wins": 0,
    "losses": 0,
    "goals": 0,
    "assists": 0,
-   "rit": 5,
-   "tir": 5,
-   "pas": 5,
-   "reg": 5,
-   "def": 5,
+   "rit": 6,
+   "tir": 7,
+   "pas": 8,
+   "reg": 8,
+   "def": 7,
    "fis": 5
   }
  ],
