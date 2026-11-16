@@ -69,7 +69,9 @@
   {
    "id": "p4",
    "name": "Victor",
-   "pos": [],
+   "pos": [
+    "MC"
+   ],
    "wins": 1,
    "losses": 0,
    "goals": 1,
