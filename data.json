@@ -4,8 +4,9 @@
    "id": "p1",
    "name": "Samuel De La Cruz",
    "pos": [
-    "MC",
-    "EI"
+    "EI",
+    "MCD",
+    "MCO"
    ],
    "wins": 1,
    "losses": 0,
