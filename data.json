@@ -9,7 +9,7 @@
     "MCO"
    ],
    "wins": 0,
-   "losses": 0,
+   "losses": 1,
    "goals": 1,
    "assists": 2,
    "rit": 9,
@@ -33,7 +33,7 @@
     "DC",
     "MC"
    ],
-   "wins": 0,
+   "wins": 1,
    "losses": 0,
    "goals": 2,
    "assists": 3,
@@ -55,7 +55,7 @@
     "ED"
    ],
    "wins": 0,
-   "losses": 0,
+   "losses": 1,
    "goals": 3,
    "assists": 4,
    "rit": 9,
@@ -73,7 +73,7 @@
     "MC"
    ],
    "wins": 0,
-   "losses": 0,
+   "losses": 1,
    "goals": 1,
    "assists": 4,
    "rit": 9,
@@ -110,7 +110,7 @@
    "pos": [
     "EI"
    ],
-   "wins": 0,
+   "wins": 1,
    "losses": 0,
    "goals": 1,
    "assists": 2,
@@ -131,7 +131,7 @@
    ],
    "played": 1,
    "wins": 0,
-   "losses": 0,
+   "losses": 1,
    "goals": 0,
    "assists": 1,
    "rit": 5,
@@ -157,7 +157,7 @@
     "MC"
    ],
    "played": 1,
-   "wins": 0,
+   "wins": 1,
    "losses": 0,
    "goals": 0,
    "assists": 0,
@@ -174,7 +174,7 @@
    "pos": [],
    "played": 1,
    "wins": 0,
-   "losses": 0,
+   "losses": 1,
    "goals": 2,
    "assists": 3,
    "rit": 6,
@@ -196,7 +196,7 @@
    ],
    "played": 1,
    "wins": 0,
-   "losses": 0,
+   "losses": 1,
    "goals": 0,
    "assists": 0,
    "rit": 6,
@@ -211,10 +211,10 @@
    "name": "Angel Tejada",
    "pos": [],
    "played": 1,
-   "wins": 0,
+   "wins": 1,
    "losses": 0,
-   "goals": 3,
-   "assists": 0,
+   "goals": 4,
+   "assists": 2,
    "rit": 8.9,
    "tir": 6,
    "pas": 7.9,
@@ -231,10 +231,10 @@
     "MCO"
    ],
    "played": 1,
-   "wins": 0,
+   "wins": 1,
    "losses": 0,
    "goals": 1,
-   "assists": 0,
+   "assists": 2,
    "rit": 6,
    "tir": 7,
    "pas": 9,
@@ -250,7 +250,7 @@
    "na": "Equipo A",
    "nb": "Equipo B",
    "sa": 7,
-   "sb": 7,
+   "sb": 8,
    "st": [
     {
      "id": "p1",
@@ -320,7 +320,7 @@
      "id": "pmwjqogp1",
      "t": "B",
      "g": 1,
-     "a": 0,
+     "a": 2,
      "s": 0,
      "b": false
     },
@@ -335,13 +335,13 @@
     {
      "id": "pmwjqld4s",
      "t": "B",
-     "g": 3,
-     "a": 0,
+     "g": 4,
+     "a": 2,
      "s": 0,
      "b": false
     }
    ],
-   "mvp": "p3"
+   "mvp": "pmwjqld4s"
   }
  ]
 }
